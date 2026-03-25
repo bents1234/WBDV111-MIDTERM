@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Courses</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo">ScholarPortal</div>
+        <nav>
+            <a href="courses.html">Courses</a>
+            <a href="register.html">Register</a>
+            <a href="profile.html">Profile</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <h2>Available Courses</h2>
+        <p>List of courses offered this semester.</p>
+        <table>
+            <tr>
+                <th>Code</th>
+                <th>Name</th>
+                <th>Credits</th>
+            </tr>
+            <tr>
+                <td>WBDV111</td>
+                <td>WEB DEVELOPMENT W/LAB</td>
+				 <td>3</td>
+            </tr>
+            <tr>
+                <td>MATM111</td>
+                <td>MATHEMATICS IN MODERN WORLD</td>
+				 <td>4</td>
+            </tr>
+            <tr>
+                <td>INPR111</td>
+                <td>INTERMEDIATE PROGRAMMING</td>
+                <td>3</td>
+            </tr>
+        </table>
+    </div>
+
+    <script>
+        if (localStorage.getItem("user") == null) {
+            window.location.href = "index.html";
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Libry Connect</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <h1>Libry Connect</h1>
+    <nav>
+      <a class="nav-btn" href="search.html">Search</a>
+      <a class="nav-btn" href="members.html">Members</a>
+	   <a class="nav-btn" href="books.html">Books</a>
+      <a class="nav-btn" href="loans.html">Loans</a>
+      <button class="info-btn" onclick="showOverdue()">Overdue</button>
+    </nav>
+  </header>
+
+  <main>
+    <section class="login-register">
+      <h2>Login</h2>
+      <form>
+        <input type="text" placeholder="Username">
+        <input type="password" placeholder="Password">
+        <button type="button" class="card-btn">Login</button>
+      </form>
+      <p style="color: gray; font-size: 0.9rem; margin-top: 10px;">(for display only)</p>
+    </section>
+
+    <div id="overdueDisplay" class="info-display"></div>
+  </main>
+
+  <script>
+    function showOverdue() {
+      const overdueItems = [
+        `"Moby Dick" - Mark Johnson`,
+        `"Hamlet" - Jane Smith`
+      ];
+      const display = document.getElementById('overdueDisplay');
+      display.innerHTML = '<h3>Overdue Items:</h3><ul>' + overdueItems.map(item => `<li>${item}</li>`).join('') + '</ul>';
+    }
+  </script>
+</body>
+</html>
