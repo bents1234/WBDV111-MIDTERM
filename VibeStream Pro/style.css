@@ -1,0 +1,124 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #d0f0f7;
+    text-align: center;
+}
+
+.login-container {
+    margin-top: 80px;
+    background: #fff;
+    display: inline-block;
+    padding: 30px 40px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.music-logo {
+    font-size: 50px;
+}
+
+.site-title p {
+    font-size: 20px;
+    font-weight: bold;
+    margin: 10px 0 20px 0;
+    color: #2563eb;
+}
+
+.login-text form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.login-text input {
+    padding: 8px;
+    font-size: 16px;
+    border-radius: 6px;
+    border: 1px solid #a0aec0;
+}
+
+.login {
+    padding: 8px;
+    background: #2563eb;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 6px;
+}
+
+.login:hover {
+    background: #1d4ed8;
+}
+
+.signup-link {
+    color: #2563eb;
+    cursor: pointer;
+}
+
+nav {
+    background: #2563eb;
+    color: white;
+    padding: 10px 20px;
+    text-align: left;
+}
+
+nav .logo {
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+}
+
+.nav-links {
+    float: right;
+}
+
+.nav-links a {
+    color: white;
+    margin-left: 15px;
+    text-decoration: none;
+}
+
+.nav-links a:hover {
+    text-decoration: underline;
+}
+
+.content {
+    padding: 20px;
+}
+
+.song-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 20px;
+}
+
+.song-card {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    background: #fff;
+    padding: 10px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.song-card:hover {
+    background: #e0e7ff;
+}
+
+.song-img {
+    font-size: 30px;
+}
+
+.play-icon {
+    margin-left: auto;
+    font-size: 20px;
+}
+
+.player {
+    margin-top: 20px;
+}
+

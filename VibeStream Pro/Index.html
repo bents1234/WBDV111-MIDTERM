@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MusicoBox - Login</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="login-container">
+    <div class="music-logo">🎵</div>
+    <div class="site-title">
+        <p>Log In To MusicoBox</p>
+    </div>
+    <div class="login-text">
+        <form onsubmit="login(event)">
+            <input type="text" id="username" placeholder="username">
+            <input type="password" id="password" placeholder="password">
+            <button type="submit" class="login">Sign In</button>
+        </form>
+        <p>Don't have an account? <span class="signup-link">Sign Up</span></p>
+    </div>
+</div>
+
+<script>
+function login(event){
+    event.preventDefault();
+    window.location.href = "home.html";
+}
+</script>
+</body>
+</html>

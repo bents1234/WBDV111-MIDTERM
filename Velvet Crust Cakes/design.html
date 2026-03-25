@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Design</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="div1">
+<a href="index.html">Home</a>
+<a href="design.html">Design</a>
+<a href="orders.html">Orders</a>
+<a href="pickup.html">Pickup</a>
+<a href="schedule.html">Schedule</a>
+<a href="login.html">Login</a>
+</div>
+
+<div class="div4" id="cakes"></div>
+
+<script>
+let cakes=[
+{name:"Chocolate Cake",img:"cake1.jpg"},
+{name:"Strawberry Cake",img:"cake2.jpg"},
+{name:"Vanilla Cake",img:"cake3.jpg"}
+];
+
+let div=document.getElementById("cakes");
+
+cakes.forEach((c,i)=>{
+let d=document.createElement("div");
+d.className="product";
+d.innerHTML=`<img src="${c.img}"><p>${c.name}</p>
+<button onclick="add(${i})">Add</button>`;
+div.appendChild(d);
+});
+
+function add(i){
+let orders=JSON.parse(localStorage.getItem("orders")||"[]");
+orders.push(cakes[i]);
+localStorage.setItem("orders",JSON.stringify(orders));
+alert("Added");
+}
+</script>
+
+</body>
+</html>

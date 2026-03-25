@@ -1,0 +1,63 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nexus Events | Admin Portal</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="admin">
+  <header class="header">
+    <div class="container">
+      <a class="logo" href="index.html">Nexus Events</a>
+      <nav class="nav">
+        <a href="index.html">Home</a>
+        <a href="events.html">Events</a>
+        <a href="tickets.html">Tickets</a>
+      </nav>
+      <button class="toggle" data-toggle>Matrix: OFF</button>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="login-section">
+      <div class="welcome">
+        <h1>System Core</h1>
+        <p>Event matrix control. Manage schedules, sales data, crew assignments, and guest lists. Access restricted to core team.</p>
+        <div class="access-tags">
+          <span class="tag">Schedule</span>
+          <span class="tag">Sales</span>
+          <span class="tag">Crew</span>
+          <span class="tag">Guests</span>
+        </div>
+      </div>
+      <div class="login-panel">
+        <h2>Core Access</h2>
+        <p>Test: <strong>core</strong> / <strong>matrix24</strong></p>
+        <form data-admin-form>
+          <div class="input-group">
+            <label>Core ID</label>
+            <input type="text" placeholder="core" data-user required>
+          </div>
+          <div class="input-group">
+            <label>Access Code</label>
+            <input type="password" placeholder="•••••••" data-pass required>
+          </div>
+          <button class="btn primary">Enter Matrix</button>
+          <div class="status" data-status></div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <span class="badge">Nexus Events · Core Access</span>
+      <p>© <span data-year></span> Nexus Events. Restricted.</p>
+    </div>
+  </footer>
+
+  <script src="js/app.js" defer></script>
+  <script src="js/admin.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,89 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nexus Events | Tickets</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="tickets">
+  <header class="header">
+    <div class="container">
+      <a class="logo" href="index.html">Nexus Events</a>
+      <nav class="nav">
+        <a href="index.html" data-nav="home">Home</a>
+        <a href="events.html" data-nav="events">Events</a>
+        <a href="tickets.html" data-nav="tickets">Tickets</a>
+        <a href="venue.html" data-nav="venue">Venue</a>
+        <a href="contact.html" data-nav="contact">Contact</a>
+        <a href="admin-login.html" data-nav="admin">Admin</a>
+      </nav>
+      <button class="toggle" data-toggle>Matrix: OFF</button>
+    </div>
+  </header>
+
+  <main class="container">
+    <h1 class="section-header">Access Passes</h1>
+
+    <section class="pricing-grid">
+      <div class="price-card">
+        <span class="tier">BASE</span>
+        <h2>Entry Pass</h2>
+        <div class="price">$49</div>
+        <p>General access + merch line</p>
+        <a class="btn primary" href="contact.html">Group Rates</a>
+      </div>
+      <div class="price-card popular">
+        <span class="tier">PRO</span>
+        <h2>Lounge Pass</h2>
+        <div class="price">$89</div>
+        <p>Priority + lounge + 1 drink</p>
+        <a class="btn primary" href="contact.html">Group Rates</a>
+      </div>
+      <div class="price-card">
+        <span class="tier">ELITE</span>
+        <h2>Orbit Pass</h2>
+        <div class="price">$149</div>
+        <p>Balcony + backstage + photos</p>
+        <a class="btn primary" href="contact.html">Group Rates</a>
+      </div>
+    </section>
+
+    <section class="cart-section">
+      <h2 class="section-header">Quick Cart</h2>
+      <div class="cart">
+        <div class="cart-row" data-price="49">
+          <span>Entry $49</span>
+          <div class="qty">
+            <button data-qty="-">-</button>
+            <input data-qty value="0">
+            <button data-qty="+">+</button>
+          </div>
+        </div>
+        <div class="cart-row" data-price="89">
+          <span>Lounge $89</span>
+          <div class="qty">
+            <button data-qty="-">-</button>
+            <input data-qty value="0">
+            <button data-qty="+">+</button>
+          </div>
+        </div>
+        <div class="total">Total: $<span data-total>0</span></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <span class="badge">Nexus Events · Ticket Matrix</span>
+      <p>© <span data-year></span> Nexus Events. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="js/app.js" defer></script>
+</body>
+</html>
+
+
+
+

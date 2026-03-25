@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Orders</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="div1">
+<a href="index.html">Home</a>
+<a href="design.html">Design</a>
+<a href="orders.html">Orders</a>
+<a href="pickup.html">Pickup</a>
+<a href="schedule.html">Schedule</a>
+<a href="login.html">Login</a>
+</div>
+
+<div class="div5" id="list"></div>
+
+<button onclick="goPickup()">Go to Pickup</button>
+
+<script>
+let div=document.getElementById("list");
+
+function render(){
+div.innerHTML="";
+let orders=JSON.parse(localStorage.getItem("orders")||"[]");
+
+orders.forEach((o,i)=>{
+let p=document.createElement("p");
+p.innerHTML=`<img src="${o.img}" width="50"> ${o.name}
+<button onclick="remove(${i})">Remove</button>`;
+div.appendChild(p);
+});
+}
+
+function remove(i){
+let orders=JSON.parse(localStorage.getItem("orders")||"[]");
+orders.splice(i,1);
+localStorage.setItem("orders",JSON.stringify(orders));
+render();
+}
+
+function goPickup(){
+window.location.href="pickup.html";
+}
+
+render();
+</script>
+
+</body>
+</html>

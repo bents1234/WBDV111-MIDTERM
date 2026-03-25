@@ -1,0 +1,112 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nexus Events | Matrix Dashboard</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body data-page="dashboard">
+  <header class="header">
+    <div class="container">
+      <a class="logo" href="../index.html">Nexus Events</a>
+      <nav class="nav">
+        <a href="../index.html">Public Site</a>
+        <button class="btn secondary" data-logout>Exit Matrix</button>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <div>
+        <h1>Matrix Online</h1>
+        <p>Real-time control: 847 tickets sold, 94% capacity, 22 crew active. All systems green.</p>
+        <div class="actions">
+          <button class="btn primary">+ New Event</button>
+          <button class="btn secondary">Guestlist Export</button>
+        </div>
+      </div>
+      <div class="alert-card">
+        <div class="alert-badge">LIVE</div>
+        <h2>Neon Circuit · 89%</h2>
+        <p>Main Hall · 9PM · 1,247 / 1,400</p>
+      </div>
+    </section>
+
+    <section class="metrics">
+      <div class="metric">
+        <span>1,847</span>
+        <span>Tickets Today</span>
+      </div>
+      <div class="metric">
+        <span>94%</span>
+        <span>Capacity</span>
+      </div>
+      <div class="metric">
+        <span>22</span>
+        <span>Crew Active</span>
+      </div>
+      <div class="metric">
+        <span>14</span>
+        <span>Pending Requests</span>
+      </div>
+    </section>
+
+    <div class="dashboard-grid">
+      <div class="panel">
+        <h3>Event Status</h3>
+        <div class="table">
+          <div class="row">
+            <span>Neon Circuit</span>
+            <span>9PM</span>
+            <span class="status green">Live</span>
+          </div>
+          <div class="row">
+            <span>Pixel Market</span>
+            <span>Tomorrow</span>
+            <span class="status yellow">Prep</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="panel">
+        <h3>Ticket Sales</h3>
+        <div class="progress">
+          <div>GA: <span style="width:82%"></span>82%</div>
+          <div>VIP: <span style="width:67%"></span>67%</div>
+        </div>
+      </div>
+
+      <div class="panel">
+        <h3>Guestlist (42)</h3>
+        <div class="guestlist">
+          <div class="guest">J. Doe · VIP</div>
+          <div class="guest">A. Smith · GA +1</div>
+          <div class="guest">Media Pass</div>
+        </div>
+      </div>
+
+      <div class="panel">
+        <h3>Crew Check</h3>
+        <ul>
+          <li><span class="status green">Sound</span></li>
+          <li><span class="status green">Lights</span></li>
+          <li><span class="status yellow">Bar</span></li>
+        </ul>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <span class="badge">Nexus Events · Matrix Active</span>
+      <p>© <span data-year></span> Nexus Events. Secure connection.</p>
+    </div>
+  </footer>
+
+  <script src="../js/app.js" defer></script>
+  <script src="../js/admin.js" defer></script>
+</body>
+</html>
+

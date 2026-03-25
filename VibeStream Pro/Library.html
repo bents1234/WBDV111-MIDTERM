@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MusicoBox - Library</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav>
+    <a href="home.html" class="logo">🎧 MusicoBox</a>
+    <div class="nav-links">
+        <a href="home.html">Home</a>
+        <a href="explore.html">Explore</a>
+        <a href="library.html">Library</a>
+        <a href="playlists.html">Playlists</a>
+    </div>
+</nav>
+
+<div class="content">
+    <h1>Library</h1>
+    <div class="song-list">
+        <div class="song-card" onclick="playVideo('Music2.mp4', 'Die With A Smile')">
+            <div class="song-img">🎤</div>
+            <div class="song-info">
+                <h3>Die With A Smile</h3>
+                <p>Lady Gaga & Bruno Mars</p>
+            </div>
+            <div class="play-icon">▶</div>
+        </div>
+
+        <div class="song-card" onclick="playVideo('Music3.mp4', 'I Just Might')">
+            <div class="song-img">🎹</div>
+            <div class="song-info">
+                <h3>I Just Might</h3>
+                <p>Bruno Mars</p>
+            </div>
+            <div class="play-icon">▶</div>
+        </div>
+    </div>
+
+    <div class="player">
+        <video id="videoPlayer" controls width="40%" style="border-radius:12px;"></video>
+        <p id="nowPlaying">Now Playing: -</p>
+    </div>
+</div>
+
+<script>
+function playVideo(file, title){
+    const player = document.getElementById('videoPlayer');
+    player.src = file;
+    player.load();
+    player.play();
+    document.getElementById('nowPlaying').textContent = 'Now Playing: ' + title;
+}
+</script>
+</body>
+</html>

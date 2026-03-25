@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Pickup</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="div1">
+<a href="index.html">Home</a>
+<a href="design.html">Design</a>
+<a href="orders.html">Orders</a>
+<a href="pickup.html">Pickup</a>
+<a href="schedule.html">Schedule</a>
+<a href="login.html">Login</a>
+</div>
+
+<div class="div7" id="items"></div>
+
+<div class="div8">
+<input type="date"><br>
+<input type="time"><br>
+<button onclick="submit()">Confirm Pickup</button>
+</div>
+
+<script>
+let div=document.getElementById("items");
+let orders=JSON.parse(localStorage.getItem("orders")||"[]");
+
+orders.forEach(o=>{
+let p=document.createElement("p");
+p.innerHTML=`<img src="${o.img}" width="50"> ${o.name}`;
+div.appendChild(p);
+});
+
+function submit(){
+localStorage.removeItem("orders");
+window.location.href="schedule.html";
+}
+</script>
+
+</body>
+</html>
