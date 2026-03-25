@@ -1,0 +1,118 @@
+body{
+font-family: Arial;
+margin:0;
+background:#f2f2f2;
+}
+
+nav{
+background:#ffffff;
+padding:15px;
+text-align:center;
+border-bottom:1px solid gray;
+}
+
+nav a{
+margin:0 15px;
+text-decoration:none;
+color:black;
+font-weight:bold;
+}
+
+.login-overlay{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:url("resort1.jpg");
+background-size:cover;
+display:flex;
+justify-content:center;
+align-items:center;
+}
+
+.login-box{
+background:rgba(255,255,255,0.8);
+padding:30px;
+text-align:center;
+}
+
+.login-box input{
+display:block;
+margin:10px auto;
+padding:8px;
+}
+
+.login-box button{
+padding:8px 20px;
+}
+
+.hero{
+width:100%;
+height:350px;
+object-fit:cover;
+}
+
+.info{
+padding:30px;
+text-align:center;
+}
+
+.grid{
+display:flex;
+justify-content:center;
+flex-wrap:wrap;
+gap:30px;
+padding:30px;
+}
+
+.card{
+width:250px;
+background:white;
+padding:10px;
+border:1px solid gray;
+text-align:center;
+}
+
+.card img{
+width:100%;
+height:150px;
+object-fit:cover;
+}
+
+.card button{
+margin-top:10px;
+padding:5px 15px;
+}
+
+.carousel{
+width:100%;
+height:350px;
+overflow:hidden;
+position:relative;
+}
+
+.carousel img{
+width:100%;
+height:350px;
+object-fit:cover;
+display:none;
+}
+
+.carousel img.active{
+display:block;
+}
+
+.form-section{
+padding:30px;
+background:white;
+width:400px;
+margin:auto;
+}
+
+.form-section input,
+.form-section select{
+width:100%;
+padding:8px;
+margin:8px 0;
+}

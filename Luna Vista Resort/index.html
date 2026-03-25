@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Bora Vista Resort</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="login-overlay" id="loginOverlay">
+<div class="login-box">
+<h2>Login</h2>
+<input type="text" placeholder="Username">
+<input type="password" placeholder="Password">
+<button onclick="login()">Login</button>
+</div>
+</div>
+
+<nav>
+<a href="index.html">HOME</a>
+<a href="accommodation.html">ACCOMMODATION</a>
+<a href="offers.html">OFFERS</a>
+</nav>
+
+<img src="resort1.jpg" class="hero">
+
+<div class="info">
+<h2>Welcome to Bora Vista Resort</h2>
+<p>Bora Vista Resort is a relaxing tropical destination offering beautiful ocean views and luxury accommodations.</p>
+</div>
+
+<script>
+function login(){
+document.getElementById("loginOverlay").style.display="none";
+}
+</script>
+
+</body>
+</html>

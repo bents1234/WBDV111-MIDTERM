@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Reservation</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<nav>
+<a href="index.html">HOME</a>
+<a href="accommodation.html">ACCOMMODATION</a>
+<a href="offers.html">OFFERS</a>
+</nav>
+
+<div class="carousel">
+<img src="resort1.jpg" class="active">
+<img src="resort2.jpg">
+<img src="resort3.jpg">
+</div>
+
+<div class="form-section">
+
+<h2>Reservation Form</h2>
+
+<input type="text" placeholder="Full Name">
+<input type="email" placeholder="Email">
+<input type="date">
+<input type="date">
+
+<select>
+<option>Room Type</option>
+<option>Deluxe Room</option>
+<option>Ocean View Room</option>
+<option>Suite Room</option>
+</select>
+
+<button>Submit</button>
+
+</div>
+
+<script>
+
+let index=0;
+let slides=document.querySelectorAll(".carousel img");
+
+function showSlide(){
+slides.forEach(img=>img.classList.remove("active"));
+slides[index].classList.add("active");
+index++;
+if(index>=slides.length){index=0;}
+}
+
+setInterval(showSlide,3000);
+
+</script>
+
+</body>
+</html>
