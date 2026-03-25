@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>FreshBite Prep</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="login-overlay" id="loginOverlay">
+        <div class="login-box">
+            <h2>Login</h2>
+            <input type="text" placeholder="Username">
+            <input type="password" placeholder="Password">
+            <button onclick="enter()">Login</button>
+        </div>
+    </div>
+
+    <nav>
+        <span class="logo">Foody Bite</span>
+        <a href="index.html">Home</a>
+        <a href="meals.html">Meals</a>
+        <a href="plans.html">Plans</a>
+        <a href="billing.html">Billing</a>
+        <a href="#" onclick="login()">Login</a>
+    </nav>
+
+    <div class="carousel">
+        <img src="food1.jpg" class="active">
+        <img src="food2.jpg">
+        <img src="food3.jpg">
+    </div>
+
+    <div class="section">
+        <h2>Healthy Meal</h2>
+        <p>Foody Bite provides healthy ready-to-eat meals designed for Foody lifestyles.</p>
+    </div>
+
+    <script>
+        function login() {
+            document.getElementById("loginOverlay").classList.add("active");
+        }
+
+        function enter() {
+            document.getElementById("loginOverlay").classList.remove("active");
+        }
+
+        let index = 0;
+        let slides = document.querySelectorAll(".carousel img");
+
+        function showSlide() {
+            slides.forEach(img => img.classList.remove("active"));
+            slides[index].classList.add("active");
+            index++;
+            if (index >= slides.length) {
+                index = 0;
+            }
+        }
+
+        setInterval(showSlide, 3000);
+    </script>
+
+</body>
+</html>

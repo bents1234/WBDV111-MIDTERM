@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>SwiftCart - Catalog</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="div1">
+    <a href="index.html">Home</a>
+    <a href="catalog.html">Catalog</a>
+    <a href="cart.html">Cart</a>
+    <a href="checkout.html">Checkout</a>
+    <a href="status.html">Status</a>
+    <a href="login.html">Login</a>
+</div>
+
+<div class="div4" id="products"></div>
+
+<script>
+let products = [
+    {name:"iPhone 13", img:"img1.jpg"},
+    {name:"iPhone 14", img:"img2.jpg"},
+    {name:"Samsung S21", img:"img3.jpg"},
+    {name:"Samsung S22", img:"img4.jpg"},
+    {name:"Pixel 6", img:"img5.jpg"},
+    {name:"Pixel 7", img:"img6.jpg"},
+    {name:"OnePlus 9", img:"img7.jpg"},
+    {name:"OnePlus 10", img:"img8.jpg"},
+    {name:"Xiaomi Mi 11", img:"img9.jpg"},
+    {name:"Xiaomi Mi 12", img:"img10.jpg"}
+];
+
+let productsDiv = document.getElementById("products");
+products.forEach((p, index)=>{
+    let div = document.createElement("div");
+    div.className="product";
+    div.innerHTML=`<img src="${p.img}" alt="${p.name}"><h4>${p.name}</h4><button onclick="addToCart(${index})">Add to Cart</button>`;
+    productsDiv.appendChild(div);
+});
+
+function addToCart(index){
+    let cart = JSON.parse(localStorage.getItem("cart")||"[]");
+    cart.push(products[index]);
+    localStorage.setItem("cart", JSON.stringify(cart));
+    alert(products[index].name+" added to cart");
+}
+</script>
+
+</body>
+</html>

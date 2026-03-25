@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>SwiftCart - Cart</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="div1">
+    <a href="index.html">Home</a>
+    <a href="catalog.html">Catalog</a>
+    <a href="cart.html">Cart</a>
+    <a href="checkout.html">Checkout</a>
+    <a href="status.html">Status</a>
+    <a href="login.html">Login</a>
+</div>
+
+<div class="div5" id="cartItems"></div>
+
+<div class="div6">
+    <button onclick="window.location='checkout.html'">Checkout</button>
+</div>
+
+<script>
+let cartItemsDiv = document.getElementById("cartItems");
+
+function renderCart(){
+    cartItemsDiv.innerHTML = "";
+    let cart = JSON.parse(localStorage.getItem("cart")||"[]");
+    cart.forEach((item, i)=>{
+        let p = document.createElement("p");
+        p.innerHTML=`<img src="${item.img}" width="50"> ${item.name} - Quantity: 
+        <input type="number" value="1" min="1">
+        <button onclick="removeFromCart(${i})">Remove</button>`;
+        cartItemsDiv.appendChild(p);
+    });
+}
+
+function removeFromCart(index){
+    let cart = JSON.parse(localStorage.getItem("cart")||"[]");
+    cart.splice(index,1);
+    localStorage.setItem("cart", JSON.stringify(cart));
+    renderCart();
+}
+
+renderCart();
+</script>
+
+</body>
+</html>
