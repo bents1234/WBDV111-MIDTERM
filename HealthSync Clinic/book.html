@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <title>Book - HealthSync</title>
+</head>
+<body>
+    <nav>
+        <div class="brand">HealthSync</div>
+        <div class="nav-links">
+            <a href="book.html">Book</a>
+            <a href="staff.html">Staff</a>
+            <a href="history.html">History</a>
+        </div>
+    </nav>
+    <div class="container">
+        <h2>Schedule Your Visit</h2>
+        <img src="img2.jpg" alt="Clinic Interior" style="width:100%; height:250px; object-fit:cover; border-radius:12px">
+        <div class="card">
+            <h3>Find a Timeslot</h3>
+            <p>Select your preferred department and check our real-time schedule.</p>
+            <button onclick="showAvailability()">Check Availability</button>
+        </div>
+    </div>
+
+    <div id="availModal" class="modal">
+        <div class="modal-content">
+            <h3>Available Today</h3>
+            <ul style="list-style:none; padding:0; text-align:left">
+                <li>🕒 09:00 AM - General Medicine</li>
+                <li>🕒 11:30 AM - Pediatrics</li>
+                <li>🕒 03:00 PM - Dental</li>
+            </ul>
+            <button onclick="closeAvailability()">Close</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
