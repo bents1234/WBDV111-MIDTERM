@@ -1,0 +1,125 @@
+body {
+    background-color: #1a1c23;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    color: #ffffff;
+}
+
+.card {
+    background: #242731;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+    width: 480px;
+    text-align: center;
+    border: 1px solid #323541;
+}
+
+h1 { 
+    margin-bottom: 25px; 
+    font-size: 24px; 
+    font-weight: 500; 
+    color: #8892b0;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+input, select {
+    width: 100%;
+    padding: 14px;
+    margin-bottom: 8px;
+    background: #1a1c23;
+    border: 1px solid #3b3f4e;
+    color: #ccd6f6;
+    border-radius: 8px;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+input:focus, select:focus {
+    border-color: #64ffda;
+    outline: none;
+    background: #20232d;
+}
+
+button {
+    width: 100%;
+    background-color: #64ffda;
+    color: #0a192f;
+    border: none;
+    padding: 14px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 14px;
+    border-radius: 8px;
+    margin-top: 15px;
+    text-transform: uppercase;
+    transition: transform 0.2s;
+}
+
+button:hover {
+    background-color: #52d1b2;
+    transform: translateY(-2px);
+}
+
+.header-row {
+    background-color: #323541;
+    color: #64ffda;
+    display: flex;
+    margin-top: 25px;
+    border-radius: 8px 8px 0 0;
+}
+
+.header-item {
+    flex: 1;
+    padding: 12px;
+    font-weight: 600;
+    font-size: 11px;
+    letter-spacing: 1px;
+}
+
+#list div {
+    display: flex;
+    border-bottom: 1px solid #323541;
+    background: #2a2e39;
+    transition: background 0.2s;
+}
+
+#list div:hover {
+    background: #323541;
+}
+
+.balance {
+    text-align: right;
+    margin-top: 25px;
+    font-weight: 400;
+    font-size: 18px;
+    color: #64ffda;
+}
+
+nav {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    background: #112240;
+    padding: 20px;
+    text-align: center;
+    border-bottom: 1px solid #233554;
+}
+
+nav a { 
+    color: #8892b0; 
+    text-decoration: none; 
+    margin: 0 25px; 
+    font-weight: 500; 
+    font-size: 13px;
+    transition: color 0.3s;
+}
+
+nav a:hover { 
+    color: #64ffda; 
+}

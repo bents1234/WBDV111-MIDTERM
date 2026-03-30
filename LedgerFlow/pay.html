@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <title>LedgerFlow - Pay</title>
+</head>
+<body>
+    <nav>
+        <a href="invoice.html">Invoices</a>
+        <a href="clients.html">Clients</a>
+        <a href="pay.html">Pay</a>
+    </nav>
+    <div class="card" style="margin-top: 60px;">
+        <h1>Payment History</h1>
+        <p style="font-size: 11px; color: #666;">CONFIRMED_TRANSACTIONS</p>
+
+        <div class="header-row">
+            <div class="header-item">Timestamp</div>
+            <div class="header-item">Recipient</div>
+            <div class="header-item">Amount</div>
+        </div>
+
+        <div style="display:flex; border-bottom: 1px solid #eee; text-align: left;">
+            <div style="flex:1; padding:12px; font-size: 12px; color: #888;">14:20:01</div>
+            <div style="flex:1; padding:12px; font-size: 13px;">Metro Utility</div>
+            <div style="flex:1; padding:12px; font-size: 13px; font-weight: bold; color: #d9534f;">-₱12,400</div>
+        </div>
+        <div style="display:flex; border-bottom: 1px solid #eee; text-align: left;">
+            <div style="flex:1; padding:12px; font-size: 12px; color: #888;">09:15:44</div>
+            <div style="flex:1; padding:12px; font-size: 13px;">Cloud Server</div>
+            <div style="flex:1; padding:12px; font-size: 13px; font-weight: bold; color: #d9534f;">-₱2,150</div>
+        </div>
+
+        <div class="balance" style="font-size: 14px; color: #333;">
+            Total Outflow: ₱14,550.00
+        </div>
+        <button style="background: #eee; color: #333; font-size: 12px; margin-top: 20px;">Download CSV Report</button>
+    </div>
+</body>
+</html>
